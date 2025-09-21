@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2021 Paranoid Android
+<!--
+     Copyright (C) 2021 Paranoid Android
+     Copyright (C) 2024 Neoteric-OS     
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,11 +15,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.aospa.android.marble">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <overlay
-        android:isStatic="true"
-        android:priority="900"
-        android:targetPackage="android" />
-</manifest>
+    <!-- Build fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">POCO/marble_global/marble:15/AQ3A.241006.001/OS2.0.4.0.VMRMIXM:user/release-keys</string>
+
+    <!-- Device model (Build.MODEL) to spoof for netflix -->
+    <string name="config_netflixSpoofModel" translatable="false">23049PCD8G</string>
+
+</resources>

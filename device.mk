@@ -58,7 +58,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAMarbleFrameworksOverlay \
     MarbleApertureOverlay \
     MarbleCNSettingsOverlay \
     MarbleCNSettingsProviderOverlay \
@@ -75,7 +74,8 @@ PRODUCT_PACKAGES += \
     MarbleINWifiMainlineOverlay \
     MarbleNfcOverlay \
     MarbleSettingsOverlay \
-    MarbleSystemUIOverlay
+    MarbleSystemUIOverlay \
+    NeotericMarbleFrameworksOverlay 
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 33
