@@ -8,6 +8,9 @@
 # Inherit from sm8450-common
 $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 
+# BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.product.mod_device=marble_global
