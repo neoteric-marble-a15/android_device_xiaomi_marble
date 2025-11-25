@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     MarbleSystemUIOverlay \
     NeotericMarbleFrameworksOverlay 
 
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Revanced
 $(call inherit-product, vendor/revanced/products/revanced.mk)
 
