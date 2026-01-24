@@ -35,38 +35,3 @@ service mfp-daemon /vendor/bin/hw/mfp-daemon
     user system
     group system drmrpc diag input uhid
     capabilities SYS_NICE
-
-on property:sys.boot_completed=1
-    write /dev/cpuset/background/cpus 0-2
-    write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/restricted/cpus 0-3
-
-    write /proc/sys/kernel/sched_upmigrate 95
-    write /proc/sys/kernel/sched_downmigrate 85
-    write /proc/sys/kernel/sched_group_upmigrate 95
-    write /proc/sys/kernel/sched_group_downmigrate 85
-    
-    write /proc/sys/kernel/sched_boost 0
-
-    write /dev/cpuctl/top-app/cpu.uclamp.min 10
-    write /dev/cpuctl/top-app/cpu.uclamp.max max
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-
-    write /dev/cpuctl/foreground/cpu.uclamp.min 0
-    write /dev/cpuctl/foreground/cpu.uclamp.max max
-    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
-
-    write /dev/cpuctl/background/cpu.uclamp.min 0
-    write /dev/cpuctl/background/cpu.uclamp.max 50
-    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
-
-    write /dev/cpuctl/system-background/cpu.uclamp.min 0
-    write /dev/cpuctl/system-background/cpu.uclamp.max 40
-    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
-
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:0 1:0 2:0 3:0"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 0
-    
-    write /sys/class/kgsl/kgsl-3d0/idle_timer 64    
-    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 0
-    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
